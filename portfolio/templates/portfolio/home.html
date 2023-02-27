@@ -1,0 +1,46 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="static/home/css/home.css">
+  <!-- шрифт1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+  <!-- шрифт2 -->
+  
+  <title>Maksim Pichov</title>
+</head>
+<body>
+  {% extends 'portfolio/base.html' %} 
+  {% block content %}
+  {% load static %}
+      <h1 class="griting">Hello 👋</h1>
+      <h2 class="info">This is my first project bot<br>I am constantly improving it</h2>
+      <p style="text-align:center; margin-bottom: 80px;">
+        <img id='image'class='photo' src="{% static 'portfolio/planet.jpg' %}" ><br>
+      </p>
+      <table id="data">
+        <tr>
+            {% for block in block_file %}
+          <td id="tabl" >
+            <h5 class="title">{{ block.title }}</h5><br>
+            
+            <span class="descriptions">{{ block.descriptions|safe|truncatechars:50 }}</span><br>
+            {% if block.url %}
+                <a href="{{ block.url }}" ><img src="{{ block.image.url }}" width="250" height="250"></a>
+            {% else %}
+                <img src="{{ block.image.url }}" width="250" height="250">
+          </td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+      </table>
+
+  {% endblock %}
+
+</body>
+</html>

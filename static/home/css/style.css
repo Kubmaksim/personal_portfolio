@@ -1,0 +1,13 @@
+ 
+.tag {
+   text-align: center;
+   top: 150px;
+   font-size:350%;
+   }
+
+.informations {
+   text-align: center;
+   width: auto;
+   height: 150px;
+   line-height: 50px;
+   }

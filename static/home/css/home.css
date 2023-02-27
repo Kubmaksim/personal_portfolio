@@ -1,0 +1,60 @@
+.griting{
+  color: #f8f5f5;
+  position: absolute;
+  margin-top: 150px;
+  padding: 50px;
+  margin-left: 50px;
+  font-size:50px;
+  font-family: 'Mynerve', cursive;
+}
+.info{
+  color: #f8f5f5;
+  position: absolute;
+  margin-top: 270px;
+  font-size: 40px;
+  padding: 20;
+  font-family: 'Mynerve', cursive;
+}
+
+#data{
+  margin-top: 150px;
+  width:80%;
+  margin-bottom: 3%;
+  margin-left: 13%;
+}
+
+#tabl{
+  padding-top: 450px;
+  top: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+
+.photo{
+  top: 80px;
+  position: absolute;
+  left: 850px;
+}    
+
+.title{
+  font-size: 20px;
+  color: #f8f5f5;
+  margin-bottom: -15px;
+}
+
+.descriptions{
+  color: #f8f5f5;
+
+}
+/* CSS код */
+#image {
+width: 300px;
+height: auto;
+transition: transform 1.0s ease;
+border-radius: 5%;
+}
+
+#image:hover {
+transform: scale(1.1);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="  static/home/css/all_blog.css">
+
+  <!-- <style>
+        .griting{
+      margin-top: 70px;
+      margin-left: 25%;
+      margin-right:25%;
+      padding: 30px;
+      text-align: center;
+      font-size:40px;
+      background-color:rgb(203, 243, 251);
+      border-radius: 65px;
+    }
+    .descript {
+      margin-top:2%;
+      margin-left: 10%;
+      margin-right: 815px;
+      border-bottom: 2px solid maroon;
+      padding-bottom: 0px;
+    }
+    .paddi {
+      margin-left: 10%;
+      margin-top:0%;
+      margin-right: 30%;
+      line-height: 0px;
+    }
+    h3{
+      margin-top: 50px;
+      line-height:20px;
+    }
+  </style> -->
+  <title>Blog</title>
+</head>
+<body>
+    {% extends 'portfolio/base.html' %}
+    {% block content %}
+    <h1 class="griting">This is useful informational blog</h1><br>
+    <h2 class="descript"><p>Max has written {{ blog.count }} blog{{ blog.count|pluralize }}</p></h2><br>
+    {% for Blog in blog %}
+    <div class="paddi">
+      <h2><a href="{% url 'blog:blog_detail' Blog.id %}">{{ Blog.title }}</a></h2><br>
+      <p><h3>{{ Blog.description|safe|truncatechars:100 }}</h3></p>
+      <p>{{ Blog.date|date:'d b Y' }}</p>
+    </div>
+        
+    {% endfor %}
+  {% endblock %}
+</body>
+</html>
